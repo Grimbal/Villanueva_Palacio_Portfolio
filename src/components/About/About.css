@@ -1,0 +1,187 @@
+.about-section {
+    min-height: 100vh;
+    padding: 100px 10px;
+    background-color: transparent;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: black;
+    text-shadow: 0 0 5px var(--link-hover-glow), 0 0 10px var(--link-hover-glow), 0 0 20px var(--link-hover-glow), 0 0 10px var(--link-hover-glow);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    max-width: 1500px;
+    width: 100%;
+    margin-left: 50px;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;  
+}
+
+.about-content.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.greeting {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 0px 0 0px;
+    white-space: nowrap;
+}
+
+.bio {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-picture {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid black;
+    transition: box-shadow 0.3s ease;
+    margin-left: 0px;
+    margin-right: 70px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+}
+
+.profile-picture .main-img {
+    opacity: 1;
+}
+
+.profile-picture .hover-img {
+    opacity: 0;
+}
+
+.profile-picture:hover .main-img {
+    opacity: 0;
+}
+
+.profile-picture:hover .hover-img {
+    opacity: 1;
+    box-shadow: 0 0 25px var(--accent-color);
+}
+
+.education-title {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    margin-top: 50px;
+}
+.education-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;   
+    opacity: 0;
+    transform: translateY(50px);  
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;  
+}
+
+ 
+.education-cards.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.education-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 5px var(--link-hover-glow), 0 0 10px var(--link-hover-glow), 0 0 20px var(--link-hover-glow), 0 0 10px var(--link-hover-glow);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.school {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    margin: 5px 0;
+}
+
+.course {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin: 5px 0;
+}
+
+.years {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}

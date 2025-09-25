@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: #182435; 
+  --accent-color: #03e9f4;
+  --text-color: #f0f6fc; 
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+}
+.glow-on-hover {
+  box-shadow: 0 0 5px var(--accent-color),
+              0 0 10px var(--accent-color),
+              0 0 20px var(--accent-color),
+              0 0 40px var(--primary-color),
+              0 0 80px var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 10px var(--accent-color),
+              0 0 20px var(--accent-color),
+              0 0 40px var(--accent-color),
+              0 0 80px var(--primary-color),
+              0 0 160px var(--primary-color);
+  transform: scale(1.05);
+}

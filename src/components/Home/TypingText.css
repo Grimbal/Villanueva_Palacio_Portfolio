@@ -1,0 +1,20 @@
+.typing-text {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 0 5px var(--link-hover-glow), 0 0 10px var(--link-hover-glow), 0 0 20px var(--link-hover-glow), 0 0 10px var(--link-hover-glow);
+
+  
+  border-right: 2px solid var(--accent-color);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+
+
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-color); }
+}
